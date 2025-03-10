@@ -1,0 +1,16 @@
+# Fdb version 4
+["pdflatex"] 1741480003.95066 "/Users/christianjohnson/Downloads/author-kit-CVPR2025-v3.1-latex-/main.tex" "main.pdf" "main" 1741480004.08195 2
+  "/Users/christianjohnson/Downloads/author-kit-CVPR2025-v3.1-latex-/main.tex" 1741480003.58991 2116 60c1cef4051685a1d41b2348ec9ea73d ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls" 1705352648 20144 147463a6a579f4597269ef9565205cfe ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/base/size10.clo" 1705352648 8448 dbc0dbf4156c0bb9ba01a1c685d3bad0 ""
+  "/usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf" 1708706663 41649 5d6ae549fbbcb850a863f69aa41f3d10 ""
+  "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1741044960 8221448 2caf1ada991f352a045d8d4859ed5bd1 ""
+  "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
+  "cvpr.sty" 0 -1 0 ""
+  "main.aux" 0 -1 0 "pdflatex"
+  "main.tex" 1741480003.58991 2116 60c1cef4051685a1d41b2348ec9ea73d ""
+  (generated)
+  "main.aux"
+  "main.log"
+  "main.pdf"
+  (rewritten before read)
