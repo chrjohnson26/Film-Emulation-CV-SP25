@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber template"] 1741653100.22212 "template.bcf" "template.bbl" "template" 1741653103.01277 0
+["biber christian_alex_proposal"] 1741653667.05188 "christian_alex_proposal.bcf" "christian_alex_proposal.bbl" "christian_alex_proposal" 1741653747.29475 0
+  "christian_alex_proposal.bcf" 1741653747.24084 107228 a2ebb6bbb1fe5620b45252a953c69f74 "pdflatex"
   "sample.bib" 1741669546 423 bb4d4040f48aec7c0bc550ef99e007d4 ""
-  "template.bcf" 1741653102.959 107228 a2ebb6bbb1fe5620b45252a953c69f74 "pdflatex"
   (generated)
-  "template.bbl"
-  "template.blg"
+  "christian_alex_proposal.bbl"
+  "christian_alex_proposal.blg"
   (rewritten before read)
-["pdflatex"] 1741653102.32842 "/Users/christianjohnson/Codespace/Film-Emulation-CV-SP25/latex-templates/An Article Title That Spans Multiple Lines to Show Line Wrapping/template.tex" "template.pdf" "template" 1741653103.01295 0
-  "/Users/christianjohnson/Codespace/Film-Emulation-CV-SP25/latex-templates/An Article Title That Spans Multiple Lines to Show Line Wrapping/template.tex" 1741653096.84588 17668 90112263dcb86aed34ff1012f74e59dc ""
+["pdflatex"] 1741653746.59813 "/Users/christianjohnson/Codespace/Film-Emulation-CV-SP25/latex-templates/Project-Proposal/christian_alex_proposal.tex" "christian_alex_proposal.pdf" "christian_alex_proposal" 1741653747.29494 0
+  "/Users/christianjohnson/Codespace/Film-Emulation-CV-SP25/latex-templates/Project-Proposal/christian_alex_proposal.tex" 1741653746.4291 17668 90112263dcb86aed34ff1012f74e59dc ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -132,16 +132,16 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1741044960 8221448 2caf1ada991f352a045d8d4859ed5bd1 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "LTJournalArticle.cls" 1741669546 9784 e38e4f05326438c9cfb0a6c6bf9f0764 ""
-  "template.aux" 1741653102.95802 1553 b4a6278edc40942acf22f0c81d5257a9 "pdflatex"
-  "template.bbl" 1741653101.63946 3199 985b69af5beeb44be6a586f575026aae "biber template"
-  "template.out" 1741653102.95845 1059 b673928d474186256ebddfc0dc716d35 "pdflatex"
-  "template.run.xml" 1741653102.95944 2329 dd0b28ad5248dccc56c9d3651d0f9aad "pdflatex"
-  "template.tex" 1741653096.84588 17668 90112263dcb86aed34ff1012f74e59dc ""
+  "christian_alex_proposal.aux" 1741653747.23977 1553 b4a6278edc40942acf22f0c81d5257a9 "pdflatex"
+  "christian_alex_proposal.bbl" 1741653668.47963 3199 985b69af5beeb44be6a586f575026aae "biber christian_alex_proposal"
+  "christian_alex_proposal.out" 1741653747.24027 1059 b673928d474186256ebddfc0dc716d35 "pdflatex"
+  "christian_alex_proposal.run.xml" 1741653747.2413 2434 1ef77dd8f8f0801696d66764501e2a96 "pdflatex"
+  "christian_alex_proposal.tex" 1741653746.4291 17668 90112263dcb86aed34ff1012f74e59dc ""
   (generated)
-  "template.aux"
-  "template.bcf"
-  "template.log"
-  "template.out"
-  "template.pdf"
-  "template.run.xml"
+  "christian_alex_proposal.aux"
+  "christian_alex_proposal.bcf"
+  "christian_alex_proposal.log"
+  "christian_alex_proposal.out"
+  "christian_alex_proposal.pdf"
+  "christian_alex_proposal.run.xml"
   (rewritten before read)
