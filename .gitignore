@@ -1,9 +1,7 @@
 data
-ldr.jpg
-ldr_9.jpg
-bloomed_image.jpg
-ldr_test.jpg
 output/
 *.jpg
 *.png
 script.py
+.DS_Store
+latex

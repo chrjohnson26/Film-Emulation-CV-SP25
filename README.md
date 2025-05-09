@@ -1,6 +1,8 @@
 # Film-Emulation-CV-SP25
 
-This repository contains a High Dynamic Range (HDR) image processing pipeline, implementing the Debevec algorithm for HDR reconstruction and the Reinhard operator for tone mapping. Check out [our HDR dataset on Google Drive](https://drive.google.com/drive/folders/1f8BAv3cZWv1MtfIDVDXO2MoX68-QR-a4?usp=sharing) and [the processed HDR images on Google Drive](https://drive.google.com/drive/folders/1Jsv7LVcdsvOUPuSliDZ4YODO_5oRG9gu?usp=share_link)
+This repository contains a High Dynamic Range (HDR) image processing pipeline, implementing the Debevec algorithm for HDR reconstruction and the Reinhard operator for tone mapping. The project was a final project for the Computer Vision class at Harvey Mudd College, additionally involving a write-up. The write-up/paper can be found [here](https://drive.google.com/file/d/1ezcen9Hlr1begRO1a_QVRW9G1dfGN8sT/view?usp=sharing). 
+
+Check out [our HDR dataset on Google Drive](https://drive.google.com/drive/folders/1f8BAv3cZWv1MtfIDVDXO2MoX68-QR-a4?usp=sharing) and [the processed HDR images on Google Drive](https://drive.google.com/drive/folders/1Jsv7LVcdsvOUPuSliDZ4YODO_5oRG9gu?usp=share_link). 
 
 ## Description
 
