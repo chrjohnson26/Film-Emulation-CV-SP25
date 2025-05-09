@@ -69,9 +69,9 @@
 
 \section{Introduction}
 
-With the increasing affordability of technology [1] and the widespread use of smartphones [2], nearly everyone now has access to a camera. This has opened up new possibilities for capturing and sharing images, but it also presents challenges. When taking an image with a camera, the range of light and dark values it can represent at once is its dynamic range, with values outside of this range being completely dark or completely light, thus possessing no visual information. Dynamic range is a central challenge in computational photography and image processing, as scenes with a wide range of light and dark become difficult to effectively capture and represent. 
+With the increasing affordability of technology \autocite{intel_moores_law} and the widespread use of smartphones \autocite{pew_mobile_2025}, nearly everyone now has access to a camera. This has opened up new possibilities for capturing and sharing images, but it also presents challenges. When taking an image with a camera, the range of light and dark values it can represent at once is its dynamic range, with values outside of this range being completely dark or completely light, thus possessing no visual information. Dynamic range is a central challenge in computational photography and image processing, as scenes with a wide range of light and dark become difficult to effectively capture and represent. 
 
-High dynamic range (HDR) photography is a popular solution for addressing dynamic range limitations. There are many approaches to creating an HDR image, with Deep Learning becoming an increasingly popular area [3], but the most widely used approach is image composition. In this method multiple images of the same scene are taken at different exposures, and then digitally combined to create a single image where areas of under/over exposure are filled in by the full set of images.
+High dynamic range (HDR) photography is a popular solution for addressing dynamic range limitations. There are many approaches to creating an HDR image, with Deep Learning becoming an increasingly popular area \autocite{artusi2021}, but the most widely used approach is image composition. In this method multiple images of the same scene are taken at different exposures, and then digitally combined to create a single image where areas of under/over exposure are filled in by the full set of images.
 
 The result, however, is not yet a compelling photograph. Most displays and printing mediums are not designed for HDR images, and thus the wide range of exposure information will make the image seem low-contrast and dull. To correct this a technique called tone mapping is used, in which an HDR image is normalized and adjusted to match the contrast needs of displays while preserving the details and balance developed in the composite. Tone mapping is a critical step in making HDR imaging practical, as it enables HDR images to be viewed on standard displays. 
 
@@ -81,7 +81,7 @@ This project aims to integrate image registration techniques for HDR composition
 
 \section{Related Work}
 
-The core approach of our project is to make use of the Debevec algorithm (also known as the Debevec-Malik algorithm). The Debevec algorithm pioneered HDR compositing, and remains to be widely used in computer vision projects requiring HDR image handling, with the original paper receiving over 4000 citations. Given its long standing popularity and effective results, our project ultimately sought to re-implement the Debevec algorithm in a complete pipeline to generate compelling images of high-contrast scenes. 
+The core approach of our project is to make use of the Debevec algorithm \autocite{debevec} (also known as the Debevec-Malik algorithm). The Debevec algorithm pioneered HDR compositing, and remains to be widely used in computer vision projects requiring HDR image handling, with the original paper receiving over 4000 citations. Given its long standing popularity and effective results, our project ultimately sought to re-implement the Debevec algorithm in a complete pipeline to generate compelling images of high-contrast scenes. 
 
 The algorithm, first published in SIGGRAPH ‘97 was actually designed with the intent of producing high-quality digitizations of film scans. Most available scanning technology at the time of this paper’s writing had a dynamic range more limited than that of most film stocks, and thus digitizing images from film would result in a loss in image quality. While our project focuses on a different application of HDR compositing, this methodology will still work, although some care will need to be taken to ensure that the images are prepared properly. In particular, images will need to be registered such that pixel values for each exposure align to the same relative points in the image.
 
@@ -93,16 +93,16 @@ Thus, our project uses this algorithm to generate a radiance map, from which a t
 \section{Methodology}
 
 \subsection{Dataset}
-After evaluating existing datasets and finding none that met the specified requirements of our HDR task, we decided to create a custom dataset tailored to our project [1]. The data set consists of thirteen sets of images captured around the academic end of Harvey Mudd’s campus. 
+After evaluating existing datasets and finding none that met the specified requirements of our HDR task, we decided to create a custom dataset tailored to our project accessible on \underline{\href{https://drive.google.com/drive/folders/1f8BAv3cZWv1MtfIDVDXO2MoX68-QR-a4?usp=share_link}{Google drive}}. The data set consists of thirteen sets of images captured around the academic end of Harvey Mudd’s campus. 
 
-To ensure minimal movement between shots, we used a tripod and a \textbf{[Alex’s Camera name (I think Sony A7)]} camera. At each location, we captured several images of the same scene while systematically varying the exposure levels. The exposure times ranged from 1/8000th of a second to 1/30th of a second, providing a broad spectrum of lighting conditions to support HDR image composition and tone mapping.  
+To ensure minimal movement between shots, we used a tripod and a Sony A7iii camera. At each location, we captured several images of the same scene while systematically varying the exposure levels. The exposure times ranged from 1/8000th of a second to 1/30th of a second, providing a broad spectrum of lighting conditions to support HDR image composition and tone mapping.  
 	% \textbf{[Add about converting raw files to file format usable for openCV]}
 
 \subsection{Image Registration}
 Despite using a tripod to minimize displacement between images, there was still a noticeable amount of movement between successive shots, necessitating image registration. The goal of image registration was to align all images captured for the same scene to a single reference image, ensuring alignment for HDR processing.
 For each scene, we selected a reference image that served as the "ground truth." The remaining images were aligned to this reference image using the following steps:
 
-Key Points were detected in both the reference image and the other images using the AKAZE feature detection algorithm. This choice was made for its efficiency and robustness in capturing distinctive features [1]. The detected features were matched between the reference image and each other image using a brute force matcher with Hamming distance as the metric. To ensure quality matches, we kept the top 75\% of matches or at least 10 matches, whichever was greater. Using the matched features, a homography transformation matrix was computed with the RANSAC algorithm. This matrix encapsulated the transformation required to align each image with the reference image. Each image was warped using the computed transformation matrix, aligning it to the reference image. Warping was necessary due to perspective distortions caused by lens or viewpoint differences. 
+Key Points were detected in both the reference image and the other images using the AKAZE feature detection algorithm. This choice was made for its efficiency and robustness in capturing distinctive features \autocite{registration}. The detected features were matched between the reference image and each other image using a brute force matcher with Hamming distance as the metric. To ensure quality matches, we kept the top 75\% of matches or at least 10 matches, whichever was greater. Using the matched features, a homography transformation matrix was computed with the RANSAC algorithm. This matrix encapsulated the transformation required to align each image with the reference image. Each image was warped using the computed transformation matrix, aligning it to the reference image. Warping was necessary due to perspective distortions caused by lens or viewpoint differences. 
 
 After alignment, residual black borders were present in some images due to the warping process. To eliminate these artifacts, we determined the minimum bounding box that encompassed all valid image regions across the aligned images. The images were then cropped to this bounding box, ensuring uniformity across the dataset and avoiding artifacts in the HDR computation. This process produced a set of images that were fully aligned and ready for HDR composition.
 
@@ -122,7 +122,7 @@ The result of these steps is a radiance map that after tone mapping exhibits the
 \subsection{Reinhard Tone Mapping}
 Running the Debevec algorithm over the images of varying exposure allows us to capture a wide range of values. However, this resulting HDR image has pixel values that exceed the dynamic range of standard display devices. Thus, tone mapping is required to compress the high dynamic range of an HDR image while ensuring the image remains visually compelling. 
 
-We chose to use Reinhard as our tone mapping operator which we implemented as directed in Reinhard's paper [1]. First, the log-average luminance of the scene is calculated using the following formula where $N$ is the number of pixels, delta is a small value to avoid the logarithm of zero and $L_w$ are the values from the HDR image.
+We chose to use Reinhard as our tone mapping operator which we implemented as directed in Reinhard's paper \autocite{reinhard2002}. First, the log-average luminance of the scene is calculated using the following formula where $N$ is the number of pixels, delta is a small value to avoid the logarithm of zero and $L_w$ are the values from the HDR image.
 
 \begin{equation}
 	\overline{L}_w = \frac{1}{N} \exp\left( \sum_{x,y} \log(\delta + L_w(x,y))\right)
@@ -142,7 +142,7 @@ Finally, we used the normalized values to calculate the resulting image values. 
 
 Unlike the basic Reinhard operator this equation allows precise control over which values are mapped to white. For our implementation we determined the $L_{white}$ value based on the maximum luminance from equation 2. This tone mapping process transforms our HDR output from the Debevec algorithm into a visually appealing image which can be displayed on standard devices.
 
-While Reinhard’s paper provided us with a conceptual understanding of the tone mapping we also referenced Deepan’s github repository [2] for the practical implementation of the Reinhard operator.
+While Reinhard’s paper provided us with a conceptual understanding of the tone mapping we also referenced Deepan’s github repository \autocite{chakrabarty2025} for the practical implementation of the Reinhard operator.
 
 \subsection{Artificial Bloom}
 
@@ -237,8 +237,6 @@ Overall, the final tone-mapped images combined with the bloom and white balance 
 One shortcoming of our implementation is in scenes in which objects had displacement between shots. For example, in scene eight the tree branches were swaying due to wind and in scene six the water spouting from the fountain. The movement between shots in these scenes resulted in a ghosting effect.
 
 
-\textbf{This statement requires citation \autocite{Smith:2023qr}. This statement requires multiple citations \autocite{Smith:2023qr, Smith:2024jd}. This statement contains an in-text citation, for directly referring to a citation like so: \textcite{Smith:2024jd}.}
-
 \subsection{Quantitative Evaluation}
 
 While we initially planned on using functions implemented in OpenCV’s library the outputs of OpenCV’s Debevec function looks unnatural. Therefore, we decided to hand implement the Debevec algorithm along with the Reinhard tone mapping operator.
@@ -247,7 +245,7 @@ While our implementation of the Debevec algorithm resulted in better looking ima
 
 The camera response function recovered through our implementation offers valuable insights to both our pipeline’s effectiveness and the characteristics of the camera we used. The curve characteristics, color channel comparison, and consistency across give us metrics to evaluate the camera response functions. 
 
-The camera response functions recovered throughout our implementation consistently display the expected S-curve shape characteristic of digital cameras. Each function exhibits a relatively linear central region with compressed responses in both the low and high intensity areas which accurately reflects how digital sensors translate light intensity to pixel values [1]. We observed smooth, monotonically increasing curves across all recovered functions which validates Debevec algorithm implementation. 
+The camera response functions recovered throughout our implementation consistently display the expected S-curve shape characteristic of digital cameras. Each function exhibits a relatively linear central region with compressed responses in both the low and high intensity areas which accurately reflects how digital sensors translate light intensity to pixel values \autocite{quant_cite}. We observed smooth, monotonically increasing curves across all recovered functions which validates Debevec algorithm implementation. 
 
 Visual inspection of the camera response functions from all thirteen scenes reveals a high consistency. The curves maintain nearly identical shapes and minimal separations between corresponding channels. While the majority of response functions were consistent across scenes there did exist some outlier curves that, although maintaining the S-shape and inflection points, exhibited increased noise. The most major outlier was scene twelve which featured more extreme lighting conditions. Despite this increased noise, the shape of the curves remained relatively consistent with the other response functions.
 
@@ -258,7 +256,7 @@ Visual inspection of the camera response functions from all thirteen scenes reve
 We were able to create a data set of images and implement a pipeline to process a series of digital images, varying in exposure, to create a HDR image encapsulating the aesthetic found in film images. 
 
 While successful in our task there are some areas in our project which could be developed further in the future. Given the current computational inefficiencies in our implementation of the Debevec algorithm we could look at OpenCV’s implementation to make the run time faster. 
-As mentioned in the results section scenes with even slight motion resulted in ghosting in the final image. There has been research done [1] to remedy the ghosting issue and a future work could involve implementing these deghosting algorithms to create a more clear final product.
+As mentioned in the results section scenes with even slight motion resulted in ghosting in the final image. There has been research done \autocite{conclusion_cite} to remedy the ghosting issue and a future work could involve implementing these deghosting algorithms to create a more clear final product.
 
 
 %----------------------------------------------------------------------------------------

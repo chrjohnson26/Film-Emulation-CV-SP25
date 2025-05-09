@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber christian_alex_proposal"] 1746751552.34996 "christian_alex_proposal.bcf" "christian_alex_proposal.bbl" "christian_alex_proposal" 1746760800.131 0
-  "christian_alex_proposal.bcf" 1746760800.07649 107228 a2ebb6bbb1fe5620b45252a953c69f74 "pdflatex"
-  "sample.bib" 1746751220.37462 423 bb4d4040f48aec7c0bc550ef99e007d4 ""
+["biber christian_alex_proposal"] 1746763261.65829 "christian_alex_proposal.bcf" "christian_alex_proposal.bbl" "christian_alex_proposal" 1746763265.62561 0
+  "christian_alex_proposal.bcf" 1746763265.56677 107500 a51bb1093e0ea65b0b72fab753262463 "pdflatex"
+  "sample.bib" 1746763083.35199 5161 3653f793bfb87cf69e8ca0ade299788f ""
   (generated)
   "christian_alex_proposal.bbl"
   "christian_alex_proposal.blg"
   (rewritten before read)
-["pdflatex"] 1746760799.41122 "/Users/christianjohnson/Codespace/Film-Emulation-CV-SP25/latex/Final-Report/christian_alex_proposal.tex" "christian_alex_proposal.pdf" "christian_alex_proposal" 1746760800.1312 0
-  "/Users/christianjohnson/Codespace/Film-Emulation-CV-SP25/latex/Final-Report/christian_alex_proposal.tex" 1746760798.52584 26329 9edfc38da5a753f8c1375045e6e7aa84 ""
+["pdflatex"] 1746763264.85435 "/Users/christianjohnson/Codespace/Film-Emulation-CV-SP25/latex/Final-Report/christian_alex_proposal.tex" "christian_alex_proposal.pdf" "christian_alex_proposal" 1746763265.6258 0
+  "/Users/christianjohnson/Codespace/Film-Emulation-CV-SP25/latex/Final-Report/christian_alex_proposal.tex" 1746763261.39769 26343 77ec5e89ab110b9ca856e0a6998b5d25 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -144,11 +144,11 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1741044960 8221448 2caf1ada991f352a045d8d4859ed5bd1 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "LTJournalArticle.cls" 1746751220.37252 9784 e38e4f05326438c9cfb0a6c6bf9f0764 ""
-  "christian_alex_proposal.aux" 1746760800.07547 1958 1dbcd39661932430b440b04c523c9ba3 "pdflatex"
-  "christian_alex_proposal.bbl" 1746751553.68951 3199 985b69af5beeb44be6a586f575026aae "biber christian_alex_proposal"
-  "christian_alex_proposal.out" 1746760800.07591 1529 ed756043826cc95b4aed64aa659aa317 "pdflatex"
-  "christian_alex_proposal.run.xml" 1746760800.07691 2434 1ef77dd8f8f0801696d66764501e2a96 "pdflatex"
-  "christian_alex_proposal.tex" 1746760798.52584 26329 9edfc38da5a753f8c1375045e6e7aa84 ""
+  "christian_alex_proposal.aux" 1746763265.56568 2734 7a3060c7ce6d61b9b1783cd3facb6a9a "pdflatex"
+  "christian_alex_proposal.bbl" 1746763263.18316 15943 c2d9624d72ec0eb42978a2bb5d7a54ce "biber christian_alex_proposal"
+  "christian_alex_proposal.out" 1746763265.56613 1529 ed756043826cc95b4aed64aa659aa317 "pdflatex"
+  "christian_alex_proposal.run.xml" 1746763265.56721 2434 1ef77dd8f8f0801696d66764501e2a96 "pdflatex"
+  "christian_alex_proposal.tex" 1746763261.39769 26343 77ec5e89ab110b9ca856e0a6998b5d25 ""
   (generated)
   "christian_alex_proposal.aux"
   "christian_alex_proposal.bcf"

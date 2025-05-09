@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.3.3)  8 MAY 2025 20:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.3.3)  8 MAY 2025 21:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -715,7 +715,24 @@ File: ts1pplx.fd 2004/09/06 font definitions for TS1/pplx.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplx/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
- [4] (./christian_alex_proposal.aux)
+
+Underfull \hbox (badness 1308) in paragraph at lines 267--267
+\T1/pplx/m/n/10 (+20) 05-07. In-tel News-room, 2025. \T1/pplx/m/sc/10 (+20) url\T1/pplx/m/n/10 (+20) : [][]$\T1/cmtt/m/n/10 https :
+ []
+
+
+Underfull \hbox (badness 6252) in paragraph at lines 267--267
+\T1/cmtt/m/n/10 / / newsroom . intel . com / tech101 /
+ []
+
+
+Underfull \hbox (badness 1546) in paragraph at lines 267--267
+\T1/pplx/m/sc/10 (+20) url\T1/pplx/m/n/10 (+20) : [][]$\T1/cmtt/m/n/10 https : / / www . pewresearch . org /
+ []
+
+[4] [5
+
+] (./christian_alex_proposal.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -727,18 +744,18 @@ Package logreq Info: Writing requests to 'christian_alex_proposal.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21764 strings out of 474116
- 378538 string characters out of 5743683
- 1947187 words of memory out of 5000000
- 43457 multiletter control sequences out of 15000+600000
- 634826 words of font info for 369 fonts, out of 8000000 for 9000
+ 21805 strings out of 474116
+ 380378 string characters out of 5743683
+ 1948187 words of memory out of 5000000
+ 43486 multiletter control sequences out of 15000+600000
+ 635214 words of font info for 373 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 81i,12n,95p,1265b,1726s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 81i,12n,95p,1265b,1612s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on christian_alex_proposal.pdf (4 pages, 167004 bytes).
+Output written on christian_alex_proposal.pdf (5 pages, 183978 bytes).
 PDF statistics:
- 142 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
+ 180 PDF objects out of 1000 (max. 8388607)
+ 151 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 500000)
  111713 words of extra memory for PDF output out of 128383 (max. 10000000)
 
